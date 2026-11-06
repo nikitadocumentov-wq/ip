@@ -137,7 +137,7 @@ a{color:inherit;text-decoration:none}
 
   <div class="lp-trust-mini">
     <div><b>15+</b>лет опыта<br>с Домами юстиции</div>
-    <div><b>3</b>Тбилиси · Батуми ·<br>Кутаиси + удалённо</div>
+    <div><b>3 <span style="font-weight:800;font-size:.8em">города</span></b>Батуми, Тбилиси,<br>Кутаиси + удалённо</div>
     <div><b>А→Я</b>сопровождаем<br>шаг за шагом</div>
   </div>
 </div></main>
@@ -145,7 +145,7 @@ a{color:inherit;text-decoration:none}
 <footer class="lp-foot"><small>© 2026 Documenti.ge · <a href="https://documenti.ge/politika.html" target="_blank" rel="noopener">Политика конфиденциальности</a></small></footer>
 
 <script>
-// UTM → Telegram: читаем параметры из URL при загрузке и сохраняем в sessionStorage
+// UTM: сохраняем метки (для аналитики), в сообщение больше не добавляем
 (function() {
   var p = new URLSearchParams(window.location.search);
   ['utm_source','utm_medium','utm_campaign','utm_content','utm_term'].forEach(function(k) {
@@ -153,7 +153,7 @@ a{color:inherit;text-decoration:none}
   });
 })();
 
-// Documenti CAPI: личный промокод + запись «код = клик по рекламе» в помощник (как на лендинге ВНЖ)
+// Documenti CAPI: личный промокод + запись «код = клик по рекламе» в помощник
 var DG = { helper: 'https://documenti-capi.nikitadocumentov.workers.dev', prefix: 'IP', pixel: '797472970022533' };
 var DG_ABC = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
 function dgStore(k, v) { try { if (v === undefined) return localStorage.getItem(k); localStorage.setItem(k, v); } catch (e) { return null; } }
@@ -186,8 +186,10 @@ function openTG(e) {
   var msg =
     'Здравствуйте! Хочу зарегистрировать ИП в Грузии.\n' +
     'Мой промокод: ' + dgCode + ' — хочу в программу лояльности.';
+
   window.open('https://t.me/documenti_ge?text=' + encodeURIComponent(msg), '_blank');
 }
 </script>
+
 
 </body></html>
